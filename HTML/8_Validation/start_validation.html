@@ -45,13 +45,13 @@
       </div>
       <div>
         <label for="form-cc">Credit card number<abbr title="required">*</abbr></label>
-        <input id="form-cc" name="cc" type="text" maxlength="16" required/>
+        <input id="form-cc" name="cc" type="number" maxlength="16" required/>
         <label for="form-cvc">CVC<abbr title="required">*</abbr></label>
-        <input id="form-cvc" name="cvc" type="text" maxlength="3" required/>
+        <input id="form-cvc" name="cvc" type="number" maxlength="3" required/>
         <label for="form-exp">Expiration date<abbr title="required">*</abbr></label>
         <input id="form-exp" name="exp" type="date" required/>
         <label for="form-address">Address<abbr title="required">*</abbr></label>
-        <input type="text" id="form-address" name="address" required/>
+        <textarea cols="100" rows="8" id="form-address" placeholder="Write your address" name="form-address" required></textarea>
       </div>
 
       <button type="submit">Submit</button>
