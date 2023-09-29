@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Form Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registration form</h1>
+    <form>
+      <label for="email">Email <abbr title="required">*</abbr></label>
+      <input type="email" name="email" required/>
+      <label for="password">Password <abbr title="required">*</abbr></label>
+      <input type="password" name="password" required/>
+      <label for="first_name">First Name <abbr title="required">*</abbr></label>
+      <input type="text" value="" name="first_name" placeholder="Write your first name" required pattern="[A-Za-z]+" minlength="2" maxlength="20"/>
+      <label for="last_name">Last Name <abbr title="required">*</abbr></label>
+      <input type="text" value="" name="last_name" placeholder="Write your last name" required pattern="[A-Za-z]+" minlength="2" maxlength="20"/>
+      <label for="date">Date of birth</label>
+      <input type="date" name="date" />
+      <label for="phone">Telephone number <abbr title="required">*</abbr></label>
+      <input type="tel" name="phone" required/>
+      <br>
+      <br>
+      <fieldset>
+        <label for="plan_selection">Choose your plan:</label>
+        <select name="plan_selection" id="plan_selection">
+          <option value="free_plan">Free Plan</option> 
+          <option value="basic_plan">Basic Plan (10$)</option>
+          <option value="silver_plan">Silver Plan (30$)</option>
+          <option value="pro_plan" selected>Pro Plan (50$)</option>
+        </select>
+        <br>
+        <input type="checkbox" name="subscribe_proplan" value="subscribe"/>
+        <label for="subscribe_proplan">Subscribe to the Pro Plan</label>
+      </fieldset>
+      <br>
+      <label for="number">Credit Card Number<abbr title="required">*</abbr></label>
+      <input type="number" name="number" required minlength="16" maxlength="19"/>
+      <label for="number">CVC<abbr title="required">*</abbr></label>
+      <input type="number" name="number"required maxlength="3"/>
+      <fieldset>
+        <p><b>Expiration date</b></p>
+        <label for="expire_month">Expiration month<abbr title="required">*</abbr></label>
+        <select name="expire_month" id="expire_month" required>
+          <option value="">Month</option>
+          <option value="01">January</option>
+          <option value="02">February</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <label for="expire_year">Expiration year<abbr title="required">*</abbr></label>
+        <select name="expire_year" id="expire_year" required>
+          <option value="">Year</option>
+          <option value="23">2023</option>
+          <option value="24">2024</option>
+          <option value="25">2025</option>
+          <option value="26">2026</option>
+          <option value="27">2027</option>
+        </select>
+      </fieldset> 
+      <label>Billing Address<abbr title="required">*</abbr></Address></label>
+      <textarea cols="100" rows="8" id="comentario" placeholder="Write your billing address" name="comentario" required></textarea>
+      <br>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
