@@ -1,0 +1,33 @@
+body {
+    font-size: 25px;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+p {
+    width: 25px;
+    height: 25px;
+}
+
+#yellow {
+    width: 12.5%;
+}
+
+#red {
+    width: 12.5%;
+}
+
+#green {
+    width: 12.5%;
+}
+
+#orange {
+    width: 50%;
+}
+
+#blue {
+    width: 12.5%;
+}
