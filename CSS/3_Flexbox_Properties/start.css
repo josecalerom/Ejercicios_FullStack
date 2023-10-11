@@ -14,20 +14,25 @@ p {
 
 #yellow {
     width: 12.5%;
+    order: 1;
 }
 
 #red {
     width: 12.5%;
+    order: 2;
 }
 
 #green {
     width: 12.5%;
+    order: 3;
 }
 
 #orange {
     width: 50%;
+    order: 4;
 }
 
 #blue {
     width: 12.5%;
+    order: 5;
 }

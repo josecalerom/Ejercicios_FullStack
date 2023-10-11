@@ -1,0 +1,162 @@
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.calc-test-one, .calc-test-two {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.grid-calc-one {
+    width: 500px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: 5%;
+    overflow: hidden;
+    grid-template-areas: 
+    "output output output output"
+    "plus minus mult div"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero dot ac equal";
+}
+
+.grid-calc-two {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 5%;
+    overflow: hidden;
+    grid-auto-rows: 80px;
+    width: 480px;
+    grid-template-areas: 
+    "output output output output"
+    "plus minus mult div"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero dot ac equal";
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#output {
+    grid-area: output;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#mult {
+    grid-area: mult;
+}
+
+#div {
+    grid-area: div;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#six {
+    grid-area: six;
+}
+
+#five {
+    grid-area: five;
+}
+
+#four {
+    grid-area: four;
+}
+
+#three {
+    grid-area: three;
+}
+
+#two {
+    grid-area: two;
+}
+
+#one {
+    grid-area: one;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#dot {
+    grid-area: dot;
+}
+
+#ac {
+    grid-area: ac;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+.screen {
+    border: 1px solid #899DAE;
+    background-color: #EFF2F5;
+}
+
+.output {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    color: white;
+    background-color: #424C52;
+}
+
+.equal {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-color: #F77077;
+}
+
+.operators {
+    background-color: #D2DCE3;
+}
+
+.center {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+div, button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.screen:hover {
+    filter: brightness(80%);
+}
+
+

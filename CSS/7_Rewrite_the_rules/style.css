@@ -1,4 +1,23 @@
+:root {
+    --body-back-color: #011212;
+    --ball-width: 100px;
+    --ball-height: 100px;
+    --ball-back-color: #ff8800;
+    --ball-b-rad: 50px;
+}
+
 body {
+    background-color: var(--body-back-color);
+}
+
+.ball {
+    width: var(--ball-width);
+    height: var(--ball-height);
+    background-color: var(--ball-back-color);
+    border-radius: var(--ball-b-rad);
+}
+
+/* body {
     background-color: #011212;
 }
 
@@ -7,4 +26,4 @@ body {
     height: 100px;
     background-color: #ff8800;
     border-radius: 50px;
-}
+} */
