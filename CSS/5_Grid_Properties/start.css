@@ -1,5 +1,7 @@
 .grid-colors {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
     "green green green"
     "yellow red blue"
@@ -28,6 +30,7 @@
 }
 
 ul {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);

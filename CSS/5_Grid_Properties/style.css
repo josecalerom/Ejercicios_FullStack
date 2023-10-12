@@ -1,6 +1,7 @@
 body {
   width: 60em;
   margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 section {
@@ -28,13 +29,9 @@ section {
   background-color: #98d2ff;
 }
 
-ul {
-  padding: 0;
-}
-
 li {
   background-color: white;
   padding: 1em;
-  display: block;
   margin: 1em;
+  list-style: none;
 }
