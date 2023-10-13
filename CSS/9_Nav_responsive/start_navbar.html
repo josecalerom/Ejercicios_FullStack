@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Responsive Navbar Test CSS Lesson</title>
         <link rel="stylesheet" href="style.css" />
-        <title>Responsive Navbar CSS Lesson</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav class="nav-complete">
-            <div class="nav-container">
-                <h1>Navbar</h1>
-                <label for="hamb-menu" class="nav-label">
-                    <img src="assets/menu.svg" alt="hamburguer menu icon" class="nav-img">
-                </label>
-                <input type="checkbox" id="hamb-menu" class="nav-input">
-                <div class="nav-menu">
-                    <a href="#" class="nav-item"></a>
-                    <a href="#" class="nav-item"></a>
-                    <a href="#" class="nav-item"></a>
-                </div>
+        <div id="hamnav">
+            <label for="hamburger">
+                &#9776
+            </label>
+            <input type="checkbox" id="hamburger">
+            <div id="hamitems">
+                <h1 >Navbar</h1>
+                <a href="#">Home</a>
+                <a href="#">Link</a>
+                <form>
+                    <select class="no-border">
+                        <option>Dropdown</option>
+                        <option>Otro texto</option>
+                    </select>
+                </form>
+                <a href="#">
+                    <button type="submit" class="no-border" disabled>Disabled</button>
+                </a>            
+                <form>
+                    <input id="search" placeholder="Search"/>
+                    <button type="submit" class="search-button">Search</button>
+                </form>             
             </div>
+        </div>
+        <nav class="nav-complete">
             <div class="nav-left">
                 <h1>Navbar</h1>
                 <ul>
