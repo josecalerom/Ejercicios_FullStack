@@ -3,6 +3,9 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+  static fromObject (objeto) {
+    return new Person(objeto.firstName, objeto.lastName);
+  }
 }
 
 const obj = {
