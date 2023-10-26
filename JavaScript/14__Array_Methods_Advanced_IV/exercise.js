@@ -14,12 +14,12 @@ function uncompletedNotes(notes) {
 //OPTION 2: creating an array of uncompleted todos
 
 // function uncompletedNotes(notes) {
-//   let completeTodos = [];
+//   let allTodos = [];
 //   for(note of notes){
 //     note.todos.forEach(el => 
-//         completeTodos.push(el));
+//         allTodos.push(el));
 //   }
-//   let notCompletedTodos = completeTodos.filter(cond => cond.done === false);
+//   let notCompletedTodos = allTodos.filter(cond => cond.done === false);
 //   return console.log(notCompletedTodos);
 // };
 
