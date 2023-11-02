@@ -8,3 +8,16 @@ num2 = num1;
 num1 = temp;
 
 console.log('After swap: ', num1, num2); // After swap: 20 10
+
+// Using destructuring
+console.log("Using Destructuring:");
+
+let numDest1 = 10;
+let numDest2 = 20;
+
+
+console.log('Before swap: '+ numDest1 + " " + numDest2);
+
+[numDest2, numDest1] = [numDest1, numDest2];
+
+console.log('After swap: '+numDest1 + " " + numDest2);

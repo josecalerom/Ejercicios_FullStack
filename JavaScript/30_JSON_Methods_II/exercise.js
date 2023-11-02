@@ -6,6 +6,11 @@ class Person {
     this.age = age;
   }
 
+  static fromJson(json){
+    let { id, firstName, lastName, age } = JSON.parse(json);
+    return new Person(id, firstName, lastName, age);
+  }
+
   toJson() {
     return JSON.stringify(this);
   }

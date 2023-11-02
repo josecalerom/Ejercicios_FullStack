@@ -8,4 +8,11 @@ class Person {
 }
 
 const developer = new Person(1, 'Mario', 'Rossi', 25);
-// Print developer as json object
+
+console.log(developer);
+console.log(typeof(developer));
+
+// Print developer as json
+
+console.log(JSON.stringify(developer));
+console.log(typeof(JSON.stringify(developer)));

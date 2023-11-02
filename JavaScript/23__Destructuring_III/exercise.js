@@ -9,4 +9,11 @@ const person = {
   age: 25
 };
 
-console.log(isAdult(person));
+//Using Destructuring:
+
+function isAdultDestructuring({age}){
+  return age >=18;
+}
+
+console.log("Original result: " + isAdult(person));
+console.log("Destructuring result: " + isAdultDestructuring(person));
