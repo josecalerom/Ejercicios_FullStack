@@ -1,22 +1,63 @@
 <html>
   <body>
     <div id="container">
-      <form>
+      <form id="form" method="post">
         <div>
           <label>Title</label>
           <input type="text" id="todo-title" />
         </div>
         <div>
           <label>Completed</label>
-          <input type="checkbox" id="todo-completed" />
+          <input type="checkbox" id="todo-completed" onclick="checkbox()"/>
         </div>
-
-        <button type="submit" id="submit-todo"></button>
+        <button type="submit" id="submit-todo">Add</button>
       </form>
+      <div id="results">
+      </div>
     </div>
   </body>
 </html>
 
 <script>
-  // code here
+const basicURL = "https://jsonplaceholder.typicode.com/posts";
+
+const form = document.getElementById("form");
+
+function checkbox() {
+    var checked = "Uncompleted";
+    if (document.querySelector("#todo-completed:checked")) {
+       checked = "Completed";
+    }
+    return checked;
+  }
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault()
+  
+    var title = document.getElementById("todo-title").value
+    var completed = checkbox();
+  
+    //fetch post request
+  
+    fetch(basicURL, {
+      method: "POST",
+      body: JSON.stringify({
+        title: title,
+        body: completed,
+      }),
+      headers: {
+          "Content-type": "application/json; charset=UTF-8",
+      }
+    })
+      .then(function(response){
+          return response.json()
+      })
+      .then(function(info){
+          console.log(info)
+          let resultados = document.getElementById("results")
+  
+          resultados.innerHTML = `<p>The title of the todo is ${info.title}</p>
+                              <p>The body of the todo is ${info.body}</p>`
+      })
+  });
 </script>
