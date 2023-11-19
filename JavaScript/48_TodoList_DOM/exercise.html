@@ -1,9 +1,49 @@
 <html>
   <body>
-    <div id="container" style="display: flex; align-items: center;"></div>
+    <div id="container" style="display: inline; align-items: center;"></div>
   </body>
 </html>
-
 <script>
   // code here
+  let currentLink = "https://jsonplaceholder.typicode.com/todos";
+  const contenedor = document.querySelector("#container")
+  const finishedTitle = document.createElement("h1")
+  finishedTitle.textContent = "Finished Tasks"
+  finishedTitle.style.color = "green"
+  const finishedList = document.createElement("ul")
+  const todoTitle = document.createElement("h1")
+  todoTitle.textContent = "To do Tasks"
+  todoTitle.style.color = "red"
+  const todoList = document.createElement("ul")
+  contenedor.appendChild(finishedTitle)
+  contenedor.appendChild(finishedList)
+  contenedor.appendChild(todoTitle)
+  contenedor.appendChild(todoList)
+
+  async function recoverToDo(url){
+      let getJSON;
+      try{
+          let firstCall = await fetch(url);
+          getJSON = await firstCall.json();
+      }catch(err){
+          console.error(err);
+      }
+      return getJSON;
+  }
+
+  recoverToDo(currentLink)
+      .then((val) => val.forEach(item => {
+        if(item.completed === true){
+          const comp = document.createElement("li");
+          comp.textContent = `Title: ${item.title}`;
+          finishedList.appendChild(comp);
+        }else if(item.completed === false){
+          const uncomp = document.createElement("li");
+          uncomp.textContent = `Title: ${item.title}`;
+          todoList.appendChild(uncomp);
+        }else{
+          console.log(`There's an error with this item: ${item.id}`)
+        }
+      }))
+      .catch((err) => console.error(err))
 </script>
