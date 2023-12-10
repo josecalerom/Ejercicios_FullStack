@@ -1,6 +1,9 @@
-export function Welcome({ name="Fulano Pérez" }) {
+export function Welcome({ name="Fulano Pérez", age}) {
     return (
-        <p>Welcome, {name}!</p>
+        <>
+            <p>Welcome, <strong>{name}</strong>!</p>
+            <p>Your age is {age}</p>
+        </>
     );
 }
 
