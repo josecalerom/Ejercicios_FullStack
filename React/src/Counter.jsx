@@ -1,21 +1,28 @@
 import { useState } from "react"
+import { CounterDisplay } from "./CounterDisplay";
 
-export function Counter({ initialValue=0, incrementAmount=1 }) {
+export function Counter({ initialValue=0, difAmount=1 }) {
 
     const [counter, setCounter] = useState(initialValue);
 
     function handleCounterIncrement(){
-        setCounter(c => c+incrementAmount);
+        setCounter(c => c+difAmount);
+    }
+
+    function handleCounterDecrement(){
+        setCounter(c => c-difAmount);
+    }
+
+    function handleCounterReset(){
+        setCounter(initialValue);
     }
 
     return (
         <>
-            <h2>Counter: {counter}</h2>
-            <button onClick={handleCounterIncrement}>Increment the counter value by {incrementAmount}</button>
+            <CounterDisplay count={counter}/>
+            <button onClick={handleCounterIncrement}>Increment the counter value by {difAmount}</button>
+            <button onClick={handleCounterDecrement}>Decrement the counter value by {difAmount}</button>
+            <button onClick={handleCounterReset}>Reset the counter value to {initialValue}</button>
         </>
     )
 }
-
-//Q: When calling "setter" function to increment the counter
-//should the parameter be a function or an immediate value? Why?
-//A: In this case both ways are ok to obtain the result we want, but it's bette to use a function as a parameter to really be sure we are using the fresher value of the -counter- in this case 

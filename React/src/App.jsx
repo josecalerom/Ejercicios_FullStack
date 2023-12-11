@@ -15,7 +15,7 @@ export function App() {
       <Hello />
       <Welcome name="José Calero" age={29} />
       <AlertClock whenClick={handleShowTime}/>
-      <Counter initialValue={10} incrementAmount={5} />
+      <Counter initialValue={0} difAmount={6} />
     </div>
   );
 }
