@@ -1,15 +1,23 @@
+import { AlertClock } from "./AlertClock";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 
 export function App() {
+
+  function handleShowTime() {
+    const now = new Date();
+    alert(`Current time: ${now.toLocaleTimeString()}`);
+  }
+
   return (
     <div>
       <Hello />
-      <Welcome name="José Calero" age={29}/>
+      <Welcome name="José Calero" age={29} />
+      <AlertClock whenClick={handleShowTime}/>
     </div>
   );
 }
 
-    //We can use the Hello component more than once in our App component
-    //We have no problems with that
-    //The same way we can render the Message component and we can show its content
+//We can use the Hello component more than once in our App component
+//We have no problems with that
+//The same way we can render the Message component and we can show its content
