@@ -1,10 +1,6 @@
 import { AlertClock } from "./Components/AlertClock/AlertClock";
-import { Counter } from "./Components/Counter/Counter";
 import { Hello } from "./Components/Hello/Hello";
-import { Welcome } from "./Components/Welcome/Welcome";
-import { Clock } from "./Components/Clock/Clock";
-import { MouseClicker } from "./Components/MouseClicker/MouseClicker";
-import { InteractiveWelcome } from "./Components/InteractiveWelcome/InteractiveWelcome";
+import { Login } from "./Components/Login/Login";
 
 export function App() {
 
@@ -16,13 +12,9 @@ export function App() {
   return (
     <div>
       <Hello />
-      <Welcome name="José Calero" age={29} />
       <AlertClock whenClick={handleShowTime}/>
-      <Counter initialValue={0} difAmount={6} />
-      <Clock />
-      <MouseClicker />
-      <h4>This is the InterantiveWelcome component ⬇️</h4>
-      <InteractiveWelcome />
+      <h4>This is the Login component ⬇️</h4>
+      <Login />
     </div>
   );
 }
