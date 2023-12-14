@@ -4,6 +4,7 @@ import { Hello } from "./Components/Hello/Hello";
 import { Welcome } from "./Components/Welcome/Welcome";
 import { Clock } from "./Components/Clock/Clock";
 import { MouseClicker } from "./Components/MouseClicker/MouseClicker";
+import { InteractiveWelcome } from "./Components/InteractiveWelcome/InteractiveWelcome";
 
 export function App() {
 
@@ -20,6 +21,8 @@ export function App() {
       <Counter initialValue={0} difAmount={6} />
       <Clock />
       <MouseClicker />
+      <h4>This is the InterantiveWelcome component ⬇️</h4>
+      <InteractiveWelcome />
     </div>
   );
 }
