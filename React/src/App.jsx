@@ -2,6 +2,7 @@ import { AlertClock } from "./AlertClock";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
+import { Clock } from "./Clock";
 
 export function App() {
 
@@ -16,6 +17,7 @@ export function App() {
       <Welcome name="José Calero" age={29} />
       <AlertClock whenClick={handleShowTime}/>
       <Counter initialValue={0} difAmount={6} />
+      <Clock />
     </div>
   );
 }
