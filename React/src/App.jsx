@@ -1,9 +1,9 @@
-import { AlertClock } from "./AlertClock";
-import { Counter } from "./Counter";
-import { Hello } from "./Hello";
-import { Welcome } from "./Welcome";
-import { Clock } from "./Clock";
-import { MouseClicker } from "./MouseClicker";
+import { AlertClock } from "./Components/AlertClock/AlertClock";
+import { Counter } from "./Components/Counter/Counter";
+import { Hello } from "./Components/Hello/Hello";
+import { Welcome } from "./Components/Welcome/Welcome";
+import { Clock } from "./Components/Clock/Clock";
+import { MouseClicker } from "./Components/MouseClicker/MouseClicker";
 
 export function App() {
 

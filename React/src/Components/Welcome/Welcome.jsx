@@ -1,4 +1,4 @@
-import { Age } from "./Age";
+import { Age } from "../Age/Age";
 
 export function Welcome({ name="Fulano Pérez", age}) {
     return (
