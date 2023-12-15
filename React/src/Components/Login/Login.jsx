@@ -29,6 +29,10 @@ export function Login({ onLogin }) {
     onLogin(data);
   }
 
+  function handleResetForm() {
+    setData(createData())
+  }
+
   return (
     <div>
       <input
@@ -54,6 +58,7 @@ export function Login({ onLogin }) {
       <button disabled={!data.password || !data.username} onClick={handleLogin}>
         Login
       </button>
+      <button onClick={handleResetForm}>Reset</button>
     </div>
   );
 }
