@@ -1,4 +1,5 @@
 import { AlertClock } from "./Components/AlertClock/AlertClock";
+import { FocusableInput } from "./Components/FocusableInput/FocusableInput";
 import { Hello } from "./Components/Hello/Hello";
 import { Login } from "./Components/Login/Login";
 import { UncontrolledLogin } from "./Components/UncontrolledLogin/UncontrolledLogin";
@@ -17,11 +18,8 @@ export function App() {
   return (
     <div>
       <Hello />
-      <AlertClock whenClick={handleShowTime}/>
-      <h4>This is the Login component ⬇️</h4>
-      <Login onLogin={printStateValue}/>
-      <h4>This is the UncontrolledLogin component ⬇️</h4>
-      <UncontrolledLogin />
+      <h3>FocusableInput component ⬇️</h3>
+      <FocusableInput />
     </div>
   );
 }
