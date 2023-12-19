@@ -1,25 +1,34 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { CounterDisplay } from "../CounterDisplay/CounterDisplay";
 
-export function Counter({ initialValue=0, difAmount=1 }) {
+export function Counter({ initialValue=4, difAmount=2 }) {
 
     const [counter, setCounter] = useState(initialValue);
+    const refChange = useRef(null);
+    const dirChange = useRef(null);
 
     useEffect(() => {
-        console.log(`The current value of counter is: ${counter}`)
+        
+        const changeDirection = counter > initialValue ? "up ⬆️" : counter < initialValue ? "down ⬇️" : "equal";
+        
+        if(refChange.current !== null){
+            if(changeDirection != "equal" && dirChange.current !== changeDirection){
+            console.log(`Change direction (relative to ${initialValue}): ${changeDirection}`)}
+        }
+        
+        console.log(`Counter is: ${counter}`)
+        console.log(`Ref is: ${refChange.current}`)
+        
+        refChange.current = counter
+        dirChange.current = changeDirection
+
     }, [counter])
 
-    function handleCounterIncrement(){
-        setCounter(c => c+difAmount);
-    }
+    const handleCounterIncrement = () => setCounter(c => c + difAmount)
 
-    function handleCounterDecrement(){
-        setCounter(c => c-difAmount);
-    }
-
-    function handleCounterReset(){
-        setCounter(initialValue);
-    }
+    const handleCounterDecrement = () => setCounter(c => c - difAmount)
+    
+    const handleCounterReset = () => setCounter(initialValue)
 
     return (
         <>
