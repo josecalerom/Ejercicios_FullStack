@@ -1,4 +1,4 @@
-import { TodoList } from "./Components/TodoList/TodoList";
+import { Welcome } from "./components/Welcome/Welcome.jsx"
 
 export function App() {
 
@@ -13,8 +13,7 @@ export function App() {
 
   return (
     <div>
-      <h3>This is the TodoList component</h3>
-      <TodoList />
+      <Welcome />
     </div>
   );
 }
