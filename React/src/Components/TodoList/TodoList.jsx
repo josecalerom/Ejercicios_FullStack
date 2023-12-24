@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { TiDelete } from "react-icons/ti";
 
 export function TodoList() {
   const inputRef = useRef(null);
@@ -22,6 +23,12 @@ export function TodoList() {
     setTodoInput("");
   };
 
+  const handleDeleteTodo = (index) => {
+    const updatedTodos = [...todos];
+    updatedTodos.splice(index, 1);
+    setTodos(updatedTodos);
+  };
+
   const handleInputChange = (e) => setTodoInput(e.target.value);
 
   return (
@@ -36,7 +43,10 @@ export function TodoList() {
       <button onClick={handleResetTodo}>Reset todos</button>
       <ul>
         {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
+          <li key={index}>
+              {todo}  
+              <TiDelete onClick={() => handleDeleteTodo(index)} />
+          </li>
         ))}
       </ul>
     </>
