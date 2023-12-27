@@ -3,6 +3,7 @@ import { Clock } from "./Components/Clock/Clock.jsx"
 import { TodoList } from "./Components/TodoList/TodoList.jsx"
 import { UncontrolledLogin } from "./Components/UncontrolledLogin/UncontrolledLogin.jsx"
 import { FocusableInput} from "./Components/FocusableInput/FocusableInput.jsx"
+import { Container } from "./Components/Container/Container.jsx"
 
 export function App() {
 
@@ -16,7 +17,7 @@ export function App() {
   }
 
   return (
-    <div>
+    <Container title={<h1>This is the awesome title!</h1>}>
       <h1>Welcome component</h1>
       <Welcome />
       <h1>Clock component</h1>
@@ -31,6 +32,6 @@ export function App() {
       <h1>FocusableInput component</h1>
       <h4>style with react-bootstrap package</h4>
       <FocusableInput />
-    </div>
+    </Container>
   );
 }
