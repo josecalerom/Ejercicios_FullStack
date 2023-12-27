@@ -1,8 +1,9 @@
-export function UncontrolledLogin() {
-    function handleFormSubmit(event) {
-        event.preventDefault();
+import "./UncontrolledLogin.scss"
 
-    
+export function UncontrolledLogin() {
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
     //Accessing values of the form with FormData API
     const formData = new FormData(event.target);
 
@@ -11,7 +12,6 @@ export function UncontrolledLogin() {
       password: formData.get("password"),
       remember: formData.get("remember") === "on" ? true : false,
     };
-
 
     //Accessing values of the form without FormData API
     // const username = event.target.elements.namedItem("username").value;
@@ -27,25 +27,13 @@ export function UncontrolledLogin() {
     console.log(data);
   }
 
-
-    return (
-        <form onSubmit={handleFormSubmit}>
-        <input
-          placeholder="Your name"
-          name="username"
-          type="text"
-        />
-        <input
-          placeholder="Password"
-          name="password"
-          type="password"
-        />
-        <input
-          name="remember"
-          type="checkbox"
-        />
-        <button>Login</button>
-        <button type="reset">Reset</button>
-      </form>
-    );
+  return (
+    <form className="w-80 flex flex-col justify-center items-center gap-5 border-solid border-2 border-black" onSubmit={handleFormSubmit}>
+      <input className="w-60 border-2" placeholder="Your name" name="username" type="text" />
+      <input className="w-60 border-2" placeholder="Password" name="password" type="password" />
+      <input className="w-60" name="remember" type="checkbox" />
+      <button className="w-12 text-green-950 font-bold">Login</button>
+      <button className="w-12 text-green-950 font-bold" type="reset">Reset</button>
+    </form>
+  );
 }

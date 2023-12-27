@@ -9,5 +9,5 @@ export function Clock() {
     }, 1000);
   }, []);
 
-  return <h2>Current time: {date.toLocaleTimeString()}</h2>;
+  return <h2 className="clock">Current time: {date.toLocaleTimeString()}</h2>;
 }

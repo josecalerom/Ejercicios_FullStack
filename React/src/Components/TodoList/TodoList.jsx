@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { TiDelete } from "react-icons/ti";
+import clasess from "./TodoList.module.scss"
 
 export function TodoList() {
   const inputRef = useRef(null);
@@ -31,8 +32,9 @@ export function TodoList() {
 
   const handleInputChange = (e) => setTodoInput(e.target.value);
 
+
   return (
-    <>
+    <div className={clasess.list}>
       <input
         ref={inputRef}
         type="text"
@@ -49,6 +51,6 @@ export function TodoList() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
