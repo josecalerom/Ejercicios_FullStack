@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 export const Container = ({ title, children }) => {
 
-    const [collapse, setCollapse] = useState(false)
+    const [collapse, setCollapse] = useState(true)
 
     const handleCollapse = () => {
         setCollapse(value => !value)

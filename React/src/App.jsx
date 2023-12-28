@@ -6,6 +6,7 @@ import { FocusableInput } from "./Components/FocusableInput/FocusableInput.jsx";
 import { Container } from "./Components/Container/Container.jsx";
 import { LanguageContext } from "./Components/LanguageContext/LanguageContext";
 import { useState } from "react";
+import { GitHubUser } from "./Components/GitHubUser/GitHubUser.jsx";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -24,6 +25,7 @@ export function App() {
   }
 
   return (
+    <>
     <Container title={<h1>This is the awesome title!</h1>}>
       <h1>Welcome component</h1>
       <Welcome />
@@ -44,5 +46,7 @@ export function App() {
       <h4>style with react-bootstrap package</h4>
       <FocusableInput />
     </Container>
+    <GitHubUser username={"josecalerom"} />
+    </>
   );
 }
