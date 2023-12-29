@@ -7,6 +7,7 @@ import { Container } from "./Components/Container/Container.jsx";
 import { LanguageContext } from "./Components/LanguageContext/LanguageContext";
 import { useState } from "react";
 import { GitHubUser } from "./Components/GitHubUser/GitHubUser.jsx";
+import { GitHubUsers } from "./Components/GitHubUsers/GitHubUsers.jsx";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -46,7 +47,10 @@ export function App() {
       <h4>style with react-bootstrap package</h4>
       <FocusableInput />
     </Container>
+    <br />
     <GitHubUser username={"josecalerom"} />
+    <br />
+    <GitHubUsers />
     </>
   );
 }
