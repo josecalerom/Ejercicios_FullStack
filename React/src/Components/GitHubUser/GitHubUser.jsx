@@ -2,10 +2,12 @@ import useGithubUser from "../CustomHooks/useGitHubUser";
 
 export function GitHubUser({ username }) {
 
-  const data = useGithubUser(username);
+  const { data , loading , error } = useGithubUser(username);
   
   return (
     <div>
+      {loading && <h1>Loading user...</h1>}
+      {error && <h1>There is an ERROR!</h1>}
       {data && (
         <div style={{border: "2px solid black", width: "fit-content", padding: "5px"}}>
           <h3 style={{color: "blue", textDecoration: "underline"}}>{data.name} info</h3>
