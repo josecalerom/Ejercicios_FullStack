@@ -8,6 +8,18 @@ import { LanguageContext } from "./Components/LanguageContext/LanguageContext";
 import { useState } from "react";
 import { GitHubUser } from "./Components/GitHubUser/GitHubUser.jsx";
 import { GitHubUsers } from "./Components/GitHubUsers/GitHubUsers.jsx";
+import { FilteredList } from "./Components/FilteredList/FilteredList.jsx";
+
+const people = [
+  { name: "José", age: 15, id: "112" },
+  { name: "Juan", age: 32, id: "158" },
+  { name: "María", age: 10, id: "756" },
+  { name: "Pedro", age: 20, id: "278" },
+  { name: "Carmen", age: 19, id: "657" },
+  { name: "Marcela", age: 18, id: "354" },
+  { name: "Javier", age: 22, id: "248" },
+  { name: "Andrés", age: 26, id: "899" },
+];
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -51,6 +63,8 @@ export function App() {
     <GitHubUser username={"josecalerom"} />
     <br />
     <GitHubUsers />
+    <h1>Filtered List component</h1>
+    <FilteredList data={people} />
     </>
   );
 }
