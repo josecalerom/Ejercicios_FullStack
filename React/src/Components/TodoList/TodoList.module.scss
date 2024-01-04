@@ -1,0 +1,28 @@
+.list {
+    background-color: lightgray;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    button {
+        font-weight: bold;
+        color: white;
+        background-color: darkblue;
+        border-radius: 5px;
+        width:100%;
+    }
+
+    ul {
+      display:flex;
+      flex-direction: column-reverse;
+  
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
