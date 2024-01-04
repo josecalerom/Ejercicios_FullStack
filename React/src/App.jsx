@@ -15,6 +15,10 @@ export function App() {
         <Route path="/" element={<Welcome name="José Ángel" />} />
         <Route path="/counter" element={<Counter initialValue={0} difAmount={5} />}/>
         <Route path="/users/:username" element={<ShowGitHubUser />} />
+        <Route path="*" element={<div>
+          <p>ERROR. Page not Found</p>
+          <Link to="/">Go home</Link>
+        </div>} />
       </Routes>
     </>
   );
