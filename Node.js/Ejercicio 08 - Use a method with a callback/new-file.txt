@@ -1,0 +1,1 @@
+This is the string file content in exercise 08.
