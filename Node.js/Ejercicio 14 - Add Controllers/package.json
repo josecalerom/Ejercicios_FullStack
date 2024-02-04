@@ -1,0 +1,19 @@
+{
+	"name": "crud-node-exercise14.js",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "tsc-watch --noClear -p ./tsconfig.json --outDir ./dist --onSuccess \"node ./dist/server.js\""
+	},
+	"dependencies": {
+		"express": "^4.18.2",
+		"express-async-errors": "^3.1.1",
+		"joi": "^17.12.1",
+		"morgan": "^1.10.0",
+		"tsc": "^2.0.4",
+		"tsc-watch": "^6.0.4",
+		"typescript": "^5.3.3"
+	}
+}
