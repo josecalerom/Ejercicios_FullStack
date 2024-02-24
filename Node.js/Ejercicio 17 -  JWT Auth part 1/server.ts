@@ -10,6 +10,7 @@ import {
   createImage,
 } from "./src/controllers/planets";
 import multer from "multer";
+import { logIn } from "./src/controllers/users";
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -48,6 +49,9 @@ app.delete("/api/planets/:id", deleteByID);
 
 //New Route to add an image file
 app.post("/api/planets/:id/image", upload.single("image"), createImage);
+
+//Route to check Login
+app.post("/api/users/login", logIn);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
